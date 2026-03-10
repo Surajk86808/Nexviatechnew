@@ -1,0 +1,23 @@
+id: review-1
+video: /videos/review-1.mp4
+poster: /videos/review-1-thumb.jpg
+name: Rajesh Mehta
+designation: Founder, Yello Premier League
+stars: 5
+quote: "The platform was ready before deadline and exceeded expectations."
+
+id: review-2
+video: /videos/review-2.mp4
+poster: /videos/review-2-thumb.jpg
+name: Praveen Kumar Chaudhary
+designation: Owner, Sri Baba Vaidyanath Steels
+stars: 5
+quote: "Our website now brings in real B2B enquiries every week."
+
+id: review-3
+video: /videos/review-3.mp4
+poster: /videos/review-3-thumb.jpg
+name: Arjun Singh
+designation: Product Lead, Your Doc Talk
+stars: 5
+quote: "The AI accuracy blew us away. Clients love using it daily."

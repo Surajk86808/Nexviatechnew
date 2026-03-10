@@ -1,0 +1,19 @@
+id: ai-ml
+icon: brain
+title: AI & Machine Learning
+description: Custom machine learning systems that turn complex data into predictive insights and intelligent decision-making.
+
+id: gen-ai-automation
+icon: sparkles
+title: Gen AI & Automation
+description: Production-grade generative AI for copilots, assistants, and RAG systems combined with end-to-end automation using AI agents, integrations, and event-driven workflows.
+
+id: web
+icon: globe
+title: Web Application & App Development
+description: Secure, scalable, high-performance web platforms built for enterprise reliability and growth.
+
+id: data-analytics
+icon: bar-chart-3
+title: Data Analytics
+description: Real-time dashboards, data pipelines, and analytics systems that drive measurable business outcomes.

@@ -1,0 +1,34 @@
+id: ypl-auction
+category: WEB DEVELOPMENT
+title: Yello Premier League - Live Player Auction Platform
+description: A real-time cricket auction platform with live bidding, purse tracking, and admin control.
+tech: Next.js, Node.js, Express, PostgreSQL
+liveUrl: https://www.turfcricket.online/
+
+id: sri-baba-vaidyanath-steels
+category: WEB DEVELOPMENT
+title: Sri Baba Vaidyanath Steels
+description: A premium, dark-themed industrial website for a steel distributor, featuring modern UI, immersive landing visuals, product showcase, and direct enquiry actions for B2B clients.
+tech: HTML, CSS, JavaScript, Modern UI Design, Responsive Web Design
+liveUrl: https://www.sribabavaidyanathsteels.online/
+
+
+id: your-doc-talk
+category: AI / DOCUMENT INTELLIGENCE
+title: Your Doc Talk
+description: AI-powered document intelligence system enabling natural language Q&A over private documents with high accuracy and fast retrieval.
+tech: RAG, OpenAI, LangChain, Vector DB
+
+
+id: telegram-apollo-lead-finder
+category: AUTOMATION
+title: Telegram Apollo Lead Finder
+description: Intelligent n8n automation that converts natural language requests from Telegram into structured B2B lead data delivered to Google Sheets.
+tech: n8n, Telegram API, OpenAI, Apify, Google Sheets API
+
+
+id: companies-tech-web-scraping
+category: AUTOMATION
+title: Companies Tech Web Scraping
+description: Custom web scraping automation that extracts company and technology data from multiple online sources into structured formats for analytics and lead enrichment.
+tech: n8n, Node.js, Cheerio, Puppeteer, Google Sheets API

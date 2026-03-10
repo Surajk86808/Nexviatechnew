@@ -1,0 +1,107 @@
+#
+id: ypl-auction
+overview: A production-grade web app that digitizes community cricket auctions with a centralized real-time workflow.
+problem: Manual auction handling caused purse errors, delayed decisions, and poor transparency.
+solution: Built a full-stack auction system with live bidding, automated purse updates, and admin control.
+impact:
+- Auction Efficiency: 80% improvement
+- Operational Errors: Near zero purse miscalculations
+- Admin Productivity: 70% less management time
+features:
+- Live sequential bidding
+- Automated purse calculation
+- Admin dashboard
+- Role-based player categories
+tech:
+frontend: Next.js, React, Tailwind
+backend: Node.js, Express
+database: PostgreSQL, Prisma, NeonDB
+infrastructure: AWS EC2
+deployment: Cloud-hosted production server with concurrent access support
+
+id: sri-baba-vaidyanath-steels
+overview: A premium industrial web platform built to digitize and modernize the online presence of a steel distribution business with a strong brand-first approach.
+problem: Traditional steel distributors rely on offline enquiries and outdated websites, leading to low trust, poor brand perception, and missed B2B leads.
+solution: Designed and developed a dark-themed, high-impact industrial website with clear product visibility, direct enquiry actions, and a professional brand identity.
+impact:
+- Brand Credibility: Significantly improved professional perception
+- Lead Accessibility: Faster client enquiries via direct contact actions
+- User Experience: Clean navigation for contractors and builders
+features:
+- Cinematic landing page with industrial visuals
+- Product and service showcase
+- Direct WhatsApp and Call-to-Action buttons
+- Responsive layout for all devices
+- SEO-friendly structure
+tech:
+frontend: HTML, CSS, JavaScript
+design: Modern UI/UX, Dark Industrial Theme
+deployment: Static hosting with production-ready build
+
+id: your-doc-talk
+overview: An AI-driven document intelligence platform that allows users to securely upload private documents and retrieve precise answers using natural language queries.
+problem: Teams struggled to extract accurate information from large volumes of private documents, leading to time-consuming manual searches and inconsistent answers.
+solution: Built a Retrieval-Augmented Generation (RAG) system combining semantic search, vector embeddings, and LLM reasoning to deliver contextual and reliable responses.
+impact:
+  - Search Time Reduction: 70%
+  - Answer Accuracy: High-confidence contextual responses
+  - User Adoption: Rapid internal usage across teams
+features:
+  - Secure document ingestion and indexing
+  - Natural language Q&A over private data
+  - Context-aware answer generation
+  - Source-aware retrieval for traceability
+  - Scalable architecture for large document sets
+tech:
+  frontend: React, Tailwind
+  backend: Node.js, Python
+  ai: OpenAI, LangChain
+  vector_database: FAISS / Pinecone
+  infrastructure: Cloud-based secure deployment
+deployment: Scalable AI service with secure document storage and optimized retrieval pipelines
+
+
+id: telegram-apollo-lead-finder
+overview: A smart automation workflow that interprets text or voice from Telegram and performs Apollo.io lead scraping with AI-generated search queries, delivering structured B2B leads directly into Google Sheets.
+problem: Manual lead scraping and list generation was slow, error-prone, and disconnected from real user workflows, reducing sales team productivity.
+solution: Built an end-to-end n8n-based workflow that takes natural language input from a Telegram bot, transforms it into optimized Apollo.io search queries using AI, scrapes lead data via Apify, and outputs structured results into Google Sheets.
+impact:
+  - Time Saved: Significant reduction in manual lead gathering
+  - Workflow Efficiency: Seamless integration from Slack to Sheets
+  - Data Quality: Consistent output with automated enrichment
+features:
+  - Telegram native bot for text and voice input
+  - AI-based natural language to query translation
+  - Apollo.io scraping using Apify
+  - Structured data delivery to Google Sheets
+  - Error handling and status updates via bot responses
+tech:
+  frontend: Telegram Bot API
+  workflow: n8n
+  ai: OpenAI (GPT-4o-mini, Whisper)
+  scraping: Apify Apollo.io Scraper
+  data_storage: Google Sheets API
+deployment: Hosted automation logic with secure API credentials and scalable workflow execution
+
+
+id: companies-tech-web-scraping
+overview: A tailored web scraping automation solution that gathers company and technology information from various online sources, transforms it into structured data, and delivers it into Google Sheets for downstream use.
+problem: Manual research for company and tech stack data was time-consuming, inconsistent, and error-prone, slowing down analytics and enrichment workflows.
+solution: Built an n8n workflow integrating web scraping tools (Puppeteer, Cheerio) with automation logic to systematically crawl, extract, and normalize target data, then output clean results into Google Sheets for easy access and analysis.
+impact:
+  - Scraping Throughput: High-volume extraction without manual effort
+  - Data Accuracy: Standardized structure for reliable consumption
+  - Workflow Efficiency: Eliminated manual research tasks
+features:
+  - Multi-source web scraping
+  - Custom selectors for tech stack and company attributes
+  - Pagination and rate limit handling
+  - Structured export to Google Sheets
+  - Automated scheduling via n8n
+tech:
+  frontend: N/A (automation backend only)
+  workflow: n8n
+  scraping: Puppeteer, Cheerio
+  backend: Node.js
+  data_export: Google Sheets API
+deployment: Cloud-hosted automation with scheduling and error handling for continuous data harvesting

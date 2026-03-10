@@ -1,0 +1,6 @@
+# Add one category per line. These categories power /projects filters.
+WEB DEVELOPMENT
+AI & Machine Learning
+AUTOMATION
+Data Analytics
+Gen Ai

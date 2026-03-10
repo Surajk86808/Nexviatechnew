@@ -1,0 +1,24 @@
+id: yello
+quote: NexviaTech helped us modernize the YPL auction platform and improve reliability across live bidding workflows.
+name: Priya Reddy
+role: Manager
+company: yello
+
+id: rag
+quote: "The RAG system made it significantly easier to work with large volumes of private documents. We were able to retrieve accurate answers quickly without manually searching through files."
+name: Arjun Mehta
+role: Operations Manager
+company: Private Client
+
+id: apollo-agent
+quote: "This automation allowed our team to generate Apollo lead lists directly from Telegram using simple text or voice inputs. It reduced friction in our lead generation workflow and improved data consistency."
+name: Karan Malhotra
+role: Revenue Operations
+company: Private Client 
+company: NovaCorp
+
+id: cold-outreach
+quote: "This workflow simplified how we run B2B outreach. Capturing leads from Slack and automating enrichment and personalized messaging reduced manual effort and made our outreach process far more consistent."
+name: Neha Sharma
+role: Revenue Operations Manager
+company: Confidential Client
