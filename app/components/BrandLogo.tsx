@@ -9,7 +9,7 @@ const BrandLogo = ({ className = "h-8 md:h-10 w-auto" }: BrandLogoProps) => {
     <span className="inline-flex items-center">
       <Image
         src="/nexviatechbgwhite.png"
-        alt="NexviaTech"
+        alt="Nexviatech Official Logo"
         width={220}
         height={56}
         priority
@@ -17,7 +17,7 @@ const BrandLogo = ({ className = "h-8 md:h-10 w-auto" }: BrandLogoProps) => {
       />
       <Image
         src="/nextviatechbgblue.png"
-        alt="NexviaTech"
+        alt="Nexviatech Official Logo"
         width={220}
         height={56}
         priority

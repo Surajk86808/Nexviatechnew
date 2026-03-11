@@ -37,7 +37,7 @@ const ContactSection = () => {
   };
 
   return (
-    <footer id="contact" className="mt-2 px-4 sm:px-6 pb-6">
+    <footer className="mt-2 px-4 sm:px-6 pb-6">
       <div className="mx-auto w-full max-w-[92vw] 2xl:max-w-[88vw]">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -45,11 +45,11 @@ const ContactSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-8 lg:gap-20 py-4 lg:py-5 items-start"
         >
-          <div className="pt-1 lg:pt-2 text-center lg:text-left">
+          <div id="contact" className="pt-1 lg:pt-2 text-center lg:text-left scroll-mt-28 md:scroll-mt-32">
             <p className="section-label mb-2.5">GET IN TOUCH</p>
             <h3 className="text-4xl lg:text-[2.95rem] font-semibold tracking-[-0.03em] text-foreground leading-[1.02]">Contact Us</h3>
             <p className="text-[0.98rem] text-muted-foreground mt-2.5 max-w-[33ch] mx-auto lg:mx-0 leading-[1.42]">
-              Tell us your priorities and technical constraints. We'll outline a clear plan and next steps.
+              Tell us your priorities and technical constraints. We&apos;ll outline a clear plan and next steps.
             </p>
 
             <div className="mt-5 space-y-2">
@@ -68,13 +68,13 @@ const ContactSection = () => {
             </div>
 
             <div className="mt-5 space-y-2 text-sm text-muted-foreground max-w-[38ch] mx-auto lg:mx-0">
-              <p>📍 Based in Bengaluru, India · Serving clients globally</p>
-              <p>🌐 Remote-First Agency — IST (UTC +5:30) · Mon–Sat, 10AM–7PM</p>
+              <p>Based in Bengaluru, India - serving clients globally.</p>
+              <p>Remote-first agency - IST (UTC +5:30) - Mon-Sat, 10AM-7PM.</p>
               <p>We work with clients across India, US, UK, and Southeast Asia.</p>
             </div>
           </div>
 
-          <div className="premium-card rounded-xl p-4 sm:p-5 md:p-5.5 w-full max-w-[820px] lg:ml-auto">
+          <div className="premium-card rounded-xl bg-white/70 p-4 sm:p-5 md:p-5.5 w-full max-w-[820px] lg:ml-auto dark:bg-transparent">
             <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5 text-left" suppressHydrationWarning>
               <input type="hidden" name="inquiry_type" value={inquiryType} />
               <input type="hidden" name="subject" value={subject} />

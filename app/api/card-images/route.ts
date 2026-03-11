@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import path from "path";
 import { readdir } from "fs/promises";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const IMAGE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".webp", ".avif", ".gif", ".svg"]);
 
 const normalizeKey = (value: string): string =>
@@ -37,9 +40,27 @@ export async function GET() {
       }
     }
 
-    return NextResponse.json({ success: true, manifest });
+    return NextResponse.json(
+      { success: true, manifest },
+      {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+      }
+    );
   } catch {
-    return NextResponse.json({ success: true, manifest: {} });
+    return NextResponse.json(
+      { success: true, manifest: {} },
+      {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+      }
+    );
   }
 }
 

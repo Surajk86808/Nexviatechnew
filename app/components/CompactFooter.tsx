@@ -7,14 +7,14 @@ const CompactFooter = () => {
   };
 
   return (
-    <footer className="border-t border-border/80 py-6">
+    <footer className="nexviatech-footer border-t border-border/80 py-6">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
-        <p>Crafted with precision by NextEra Tech.</p>
+        <p>&copy;2026 Nexviatech</p>
         <div className="flex items-center gap-8">
-          <Link href="/privacy-policy" className="hover:text-foreground transition-colors">
+          <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
             Privacy Policy
           </Link>
-          <Link href="/terms-of-service" className="hover:text-foreground transition-colors">
+          <Link href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
             Terms of Service
           </Link>
           <button

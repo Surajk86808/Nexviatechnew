@@ -3,9 +3,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type Options = {
   enabled: boolean;
   speedPxPerSecond?: number;
+  direction?: "left" | "right";
 };
 
-export const useAutoHorizontalLoop = ({ enabled, speedPxPerSecond = 26 }: Options) => {
+export const useAutoHorizontalLoop = ({ enabled, speedPxPerSecond = 26, direction = "left" }: Options) => {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
   const offsetRef = useRef(0);
@@ -57,9 +58,11 @@ export const useAutoHorizontalLoop = ({ enabled, speedPxPerSecond = 26 }: Option
       const baseWidth = baseWidthRef.current;
       if (baseWidth > 0) {
         const deltaPx = (speedPxPerSecond * deltaMs) / 1000;
-        offsetRef.current -= deltaPx;
+        offsetRef.current += direction === "right" ? deltaPx : -deltaPx;
 
-        if (Math.abs(offsetRef.current) >= baseWidth) {
+        if (direction === "right" && offsetRef.current >= 0) {
+          offsetRef.current -= baseWidth;
+        } else if (direction === "left" && Math.abs(offsetRef.current) >= baseWidth) {
           offsetRef.current += baseWidth;
         }
 
@@ -74,7 +77,7 @@ export const useAutoHorizontalLoop = ({ enabled, speedPxPerSecond = 26 }: Option
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
       rafRef.current = null;
     };
-  }, [enabled, paused, speedPxPerSecond]);
+  }, [direction, enabled, paused, speedPxPerSecond]);
 
   const nudgeBy = (deltaPx: number) => {
     if (!enabled) return;

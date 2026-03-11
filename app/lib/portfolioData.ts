@@ -1,6 +1,7 @@
 import { parseProjectDetails, type ProjectDetailsData } from "@/lib/parseProjectDetails";
 import { parseProjectCategories } from "@/lib/parseProjectCategories";
 import { parseProjects, type ProjectCardData } from "@/lib/parseProjects";
+import { freshFetchText } from "@/lib/freshFetchText";
 
 export type PortfolioProject = ProjectCardData & {
   details: ProjectDetailsData;
@@ -22,21 +23,13 @@ const fallbackDetails = (id: string): ProjectDetailsData => ({
   deployment: "No deployment details provided.",
 });
 
-const safeFetchText = async (url: string): Promise<string> => {
-  const response = await fetch(`${url}${url.includes("?") ? "&" : "?"}ts=${Date.now()}`, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to fetch ${url}: ${response.status}`);
-  }
-  return response.text();
-};
-
 const createDetailsLookup = (details: ProjectDetailsData[]): Map<string, ProjectDetailsData> =>
   new Map(details.map((item) => [item.id, item]));
 
 export const loadPortfolioProjects = async (): Promise<PortfolioProject[]> => {
   const [projectsText, detailsText] = await Promise.all([
-    safeFetchText("/data/cards/projects.txt"),
-    safeFetchText("/data/cards/projectdetails.txt"),
+    freshFetchText("/data/cards/projects.txt"),
+    freshFetchText("/data/cards/projectdetails.txt"),
   ]);
 
   const cards = parseProjects(projectsText);
@@ -50,7 +43,7 @@ export const loadPortfolioProjects = async (): Promise<PortfolioProject[]> => {
 
 export const loadProjectCategories = async (): Promise<string[]> => {
   try {
-    const categoriesText = await safeFetchText("/data/projects/category.txt");
+    const categoriesText = await freshFetchText("/data/projects/category.txt");
     return parseProjectCategories(categoriesText);
   } catch {
     return [];

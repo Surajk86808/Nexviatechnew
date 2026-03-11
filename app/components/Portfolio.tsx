@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 import { ExternalLink, ChevronLeft, ChevronRight, Gauge, Users, Zap, Server, X } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { MouseEvent, useEffect, useMemo, useState } from "react";
-import { Dialog, DialogContent } from "./ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "./ui/dialog";
 import Link from "next/link";
 import { loadPortfolioProjects, loadProjectCategories, type PortfolioProject } from "@/lib/portfolioData";
 import { CARD_IMAGES_BY_KEY } from "@/lib/assetManifest";
@@ -321,18 +321,20 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
   return (
     <>
       <section
-        id={mode === "projects" ? "projects-list" : "portfolio"}
-        className={`relative ${mode === "projects" ? "py-10 md:py-12" : "py-24"}`}
+        id={mode === "projects" ? "projects-list" : "selected-works"}
+        className={`nexviatech-selected-works relative ${mode === "projects" ? "py-10 md:py-12" : "py-20 md:py-24"}`}
       >
-        <div className="container mx-auto px-6">
-          <ScrollReveal>
-            <p className="section-label mb-4">
-              {mode === "projects" ? "Projects" : "Case Studies Preview"}
-            </p>
-            <h2 className={`text-4xl md:text-5xl font-bold tracking-tighter-custom text-gradient ${mode === "projects" ? "mb-6" : "mb-10"}`}>
-              {mode === "projects" ? "All Project Work" : "Success Stories with Measurable Outcomes"}
-            </h2>
-          </ScrollReveal>
+        <div className="container mx-auto px-4 sm:px-6">
+          <div>
+            <ScrollReveal>
+              <p className="section-label mb-4">
+                {mode === "projects" ? "Works" : "Selected Works"}
+              </p>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter-custom text-gradient ${mode === "projects" ? "mb-6" : "mb-8 md:mb-10"}`}>
+                {mode === "projects" ? "All Works" : "Success Stories with Measurable Outcomes"}
+              </h2>
+            </ScrollReveal>
+          </div>
 
           {loading ? (
             <div className="text-muted-foreground text-sm">Loading projects...</div>
@@ -377,7 +379,7 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
                     <ScrollReveal key={`${p.id}-${p.title}-${i}`} delay={i * 0.08}>
                       <div onMouseMove={handleMouseMove} className="interactive-card case-card glow-card premium-card rounded-[16px] group/card h-full flex flex-col">
                         <ImageCarousel images={p.images} title={p.title} />
-                        <div className="p-6 flex flex-col flex-1">
+                        <div className="p-5 sm:p-6 flex flex-col flex-1">
                           <p className="case-category text-xs font-medium tracking-wider uppercase mb-1">{p.type}</p>
                           <h3 className="case-title text-foreground font-semibold mb-2">{p.title}</h3>
                           <p className="text-muted-foreground text-xs leading-relaxed mb-3 min-h-[96px] max-h-[96px] overflow-hidden">{p.description}</p>
@@ -393,7 +395,7 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
                               </Badge>
                             )}
                           </div>
-                          <div className="flex items-center gap-4 mt-auto">
+                          <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                             <button
                               type="button"
                               onClick={() => setActiveProject((current) => (current?.id === p.id ? null : p))}
@@ -427,7 +429,7 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
                   <ScrollReveal key={`${p.id}-${p.title}-${i}`} delay={i * 0.08}>
                     <div onMouseMove={handleMouseMove} className="interactive-card case-card glow-card premium-card rounded-[16px] group/card h-full flex flex-col">
                       <ImageCarousel images={p.images} title={p.title} />
-                      <div className="p-6 flex flex-col flex-1">
+                        <div className="p-5 sm:p-6 flex flex-col flex-1">
                         <p className="case-category text-xs font-medium tracking-wider uppercase mb-1">{p.type}</p>
                         <h3 className="case-title text-foreground font-semibold mb-2">{p.title}</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed mb-3 min-h-[96px] max-h-[96px] overflow-hidden">{p.description}</p>
@@ -443,7 +445,7 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
                             </Badge>
                           )}
                         </div>
-                        <div className="flex items-center gap-4 mt-auto">
+                        <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                           <button
                             type="button"
                             onClick={() => setActiveProject((current) => (current?.id === p.id ? null : p))}
@@ -472,10 +474,12 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
               {mode === "home" && (
                 <div className="mt-10 flex justify-center">
                   <Link
-                    href="/projects"
+                    href="/works"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-tag text-sm font-semibold"
                   >
-                    See All Projects
+                    See All Works
                   </Link>
                 </div>
               )}
@@ -490,7 +494,17 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
           className="w-[min(1100px,92vw)] max-w-none h-[min(86vh,860px)] p-0 border border-slate-300/65 dark:border-white/15 bg-[linear-gradient(160deg,rgba(255,255,255,0.95)_0%,rgba(246,250,255,0.92)_100%)] dark:bg-[linear-gradient(160deg,rgba(7,13,29,0.95)_0%,rgba(5,10,24,0.92)_100%)] shadow-[0_30px_80px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_80px_rgba(0,0,0,0.45)] rounded-2xl overflow-hidden backdrop-blur-sm [&>button]:hidden"
         >
           {activeProject && (
-            <div className="h-full overflow-y-auto hide-scrollbar scroll-smooth">
+            <div className="relative flex h-full min-h-0 flex-col">
+              <DialogTitle className="sr-only">{activeProject.title}</DialogTitle>
+              <button
+                type="button"
+                aria-label="Close project details"
+                onClick={() => setActiveProject(null)}
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/75 dark:bg-black/35 backdrop-blur-md border border-slate-300/70 dark:border-white/10 flex items-center justify-center text-foreground hover:bg-white dark:hover:bg-black/55 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              <div className="min-h-0 flex-1 overflow-y-auto hide-scrollbar scroll-smooth">
               <div className="relative h-[280px] md:h-[340px] overflow-hidden bg-slate-100 dark:bg-black/85">
                 <img
                   src={modalImages[modalImageIndex] || "/placeholder.svg"}
@@ -530,14 +544,6 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
                     </div>
                   </>
                 )}
-                <button
-                  type="button"
-                  aria-label="Close project details"
-                  onClick={() => setActiveProject(null)}
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/75 dark:bg-black/35 backdrop-blur-md border border-slate-300/70 dark:border-white/10 flex items-center justify-center text-foreground hover:bg-white dark:hover:bg-black/55 transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {activeProject.categoryTags.map((tag) => (
@@ -674,6 +680,7 @@ const Portfolio = ({ mode = "home" }: { mode?: PortfolioMode }) => {
                     Request Similar Solution
                   </Link>
                 </div>
+              </div>
               </div>
             </div>
           )}

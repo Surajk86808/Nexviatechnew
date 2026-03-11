@@ -1,7 +1,7 @@
 id: suraj-kumar
 name: Suraj Kumar
 role: Gen AI & Automation Engineer
-bio: Designs and deploys production-ready generative AI systems and intelligent automation solutions. Specializes in workflow automation, AI copilots, and scalable cloud-based AI integrations to improve business efficiency.
+bio: Building production-ready Gen AI and scalable automation to drive business efficiency.
 hasImage: true
 linkedin: https://www.linkedin.com/in/suraj-y-756a11233/
 email: suraj.yadav@nexviatech.online
@@ -10,7 +10,7 @@ portfolio: https://suraj26.online
 id: umesh-sharma
 name: Umesh Sharma
 role: AI/ML & Data Analytics Engineer
-bio: Builds intelligent machine learning models and data analytics systems that transform raw data into actionable insights. Experienced in predictive modeling, real-time analytics, and scalable AI solutions.
+bio: Transforming raw data into actionable insights through predictive modeling and real-time AI.
 hasImage: true
 linkedin: https://www.linkedin.com/in/umesh-sharma--/
 phone: +91 8383009318
@@ -19,7 +19,7 @@ email: umesh@nexviatech.online
 id: ankit-raj
 name: Ankit Raj
 role: Web Developer
-bio: Develops responsive, high-performance web applications using modern frontend and backend technologies. Focused on clean architecture, scalability, and seamless user experience.
+bio: Specialist in scalable frontend/backend development and modern web ecosystems
 hasImage: true
 linkedin: https://www.linkedin.com/in/ankitraj061/
 email: ankit@nexviatech.online
@@ -28,6 +28,6 @@ phone: 7667566157
 id: suraj-chaudhary
 name: Suraj Chaudhary
 role: Java Full Stack Developer
-bio: Specializes in building robust backend systems and enterprise-grade applications using Java technologies. Experienced in RESTful APIs, microservices architecture, and scalable server-side development.
+bio: Delivering scalable, high-performance enterprise applications with Java technologies.
 hasImage: true
 email: suraj.chaudhary@nexviatech.online

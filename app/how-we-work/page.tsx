@@ -35,12 +35,6 @@ const steps = [
       "We support deployment, stabilization, and performance tuning to ensure the system operates reliably as usage grows.",
     icon: TrendingUp,
   },
-  {
-    title: "Ongoing Improvement",
-    description:
-      "After launch, we continue refining the platform based on real usage, operational data, and evolving business needs.",
-    icon: Sparkles,
-  },
 ];
 
 const faqs = [

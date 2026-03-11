@@ -26,10 +26,10 @@ const valueItems = [
 
 const ValuePropositions = () => {
   return (
-    <section id="value-props" className="py-20">
+    <section id="why-us" className="nexviatech-why-us py-20">
       <div className="container mx-auto px-6">
         <ScrollReveal>
-          <p className="section-label mb-4">Why Teams Choose NexviaTech</p>
+          <p className="section-label mb-4">Why us</p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter-custom text-gradient mb-14">Built for Enterprise Scale</h2>
         </ScrollReveal>
 

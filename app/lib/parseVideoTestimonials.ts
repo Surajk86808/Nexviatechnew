@@ -1,11 +1,12 @@
 export type VideoTestimonialData = {
   id: string;
   video: string;
-  poster: string;
   name: string;
   designation: string;
+  company: string;
   stars: number;
   quote: string;
+  fullTestimonial: string[];
 };
 
 const splitBlocks = (raw: string): string[] =>
@@ -34,6 +35,23 @@ const toStars = (raw: string | undefined): number => {
   return Math.max(1, Math.min(5, parsed));
 };
 
+const stripWrappedQuotes = (value: string | undefined, fallback: string): string => {
+  if (!value) return fallback;
+  const trimmed = value.trim();
+  return trimmed.replace(/^"(.*)"$/, "$1");
+};
+
+const getFullTestimonial = (fields: Record<string, string>): string[] =>
+  Object.entries(fields)
+    .filter(([key, value]) => key.startsWith("fulltestimonial") && Boolean(value.trim()))
+    .sort(([left], [right]) => {
+      const leftIndex = Number.parseInt(left.replace("fulltestimonial", ""), 10);
+      const rightIndex = Number.parseInt(right.replace("fulltestimonial", ""), 10);
+      return leftIndex - rightIndex;
+    })
+    .map(([, value]) => stripWrappedQuotes(value, "").trim())
+    .filter(Boolean);
+
 export const parseVideoTestimonials = (raw: string): VideoTestimonialData[] => {
   const blocks = splitBlocks(raw);
   const parsed: VideoTestimonialData[] = [];
@@ -45,11 +63,12 @@ export const parseVideoTestimonials = (raw: string): VideoTestimonialData[] => {
     parsed.push({
       id: fields.id || `video-testimonial-${index + 1}`,
       video: fields.video || "",
-      poster: fields.poster || "/placeholder.svg",
       name: fields.name || "Anonymous Client",
       designation: fields.designation || "Client",
+      company: fields.company || fields.designation || "Client",
       stars: toStars(fields.stars),
-      quote: fields.quote || '"No quote provided."',
+      quote: stripWrappedQuotes(fields.quote, "No quote provided."),
+      fullTestimonial: getFullTestimonial(fields),
     });
   });
 
@@ -61,4 +80,3 @@ export const parseVideoTestimonials = (raw: string): VideoTestimonialData[] => {
     return true;
   });
 };
-

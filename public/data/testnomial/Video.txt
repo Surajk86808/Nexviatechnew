@@ -1,23 +1,33 @@
+ 
 id: review-1
-video: /videos/review-1.mp4
-poster: /videos/review-1-thumb.jpg
+video: https://www.youtube.com/watch?v=GftlBD-Apu8&list=RDMMGftlBD-Apu8&start_radio=1
 name: Rajesh Mehta
 designation: Founder, Yello Premier League
+company: Yello Premier League
 stars: 5
 quote: "The platform was ready before deadline and exceeded expectations."
+fulltestimonial1: "Working with NexviaTech was an absolute game-changer for our platform. Not only did they deliver before the deadline, but the quality of work exceeded all our expectations."
+fulltestimonial2: "The attention to detail, technical expertise, and commitment to our vision was remarkable. They understood our business needs and translated them into a robust, scalable platform."
+fulltestimonial3: "What impressed me most was their proactive communication and ability to solve complex problems efficiently."
 
 id: review-2
-video: /videos/review-2.mp4
-poster: /videos/review-2-thumb.jpg
+video: https://www.youtube.com/watch?v=GftlBD-Apu8&list=RDMMGftlBD-Apu8&start_radio=1
 name: Praveen Kumar Chaudhary
 designation: Owner, Sri Baba Vaidyanath Steels
+company: Sri Baba Vaidyanath Steels
 stars: 5
 quote: "Our website now brings in real B2B enquiries every week."
+fulltestimonial1: "Since launching our website with NexviaTech, we've seen a dramatic increase in quality B2B enquiries. The site they built perfectly showcases our steel products."
+fulltestimonial2: "The SEO optimization has put us on the first page of Google. We're now receiving 10-15 qualified leads every week."
+fulltestimonial3: "Their understanding of the B2B manufacturing sector made all the difference."
 
 id: review-3
-video: /videos/review-3.mp4
-poster: /videos/review-3-thumb.jpg
+video: https://www.youtube.com/watch?v=GftlBD-Apu8&list=RDMMGftlBD-Apu8&start_radio=1
 name: Arjun Singh
 designation: Product Lead, Your Doc Talk
+company: Your Doc Talk
 stars: 5
 quote: "The AI accuracy blew us away. Clients love using it daily."
+fulltestimonial1: "The AI-powered features NexviaTech integrated into our healthcare platform have been revolutionary. The accuracy and speed are exceptional."
+fulltestimonial2: "Our doctors report the platform saves them 2-3 hours daily. The user experience is so intuitive that adoption was nearly instant."
+fulltestimonial3: "What sets NexviaTech apart is their deep understanding of AI and ML implementation in healthcare."

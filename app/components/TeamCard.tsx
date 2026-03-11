@@ -23,7 +23,16 @@ const TeamCard = ({ member }: TeamCardProps) => {
   const imageCandidates = useMemo(() => {
     if (!member.hasImage) return [DEFAULT_TEAM_IMAGE];
     const basePath = `/team/images/${member.id}`;
-    return [`${basePath}.png`, `${basePath}.jpg`, `${basePath}.jpeg`, `${basePath}.webp`, `${basePath}.avif`, `${basePath}.svg`, member.imagePath, DEFAULT_TEAM_IMAGE];
+    return [
+      member.imagePath,
+      `${basePath}.jpeg`,
+      `${basePath}.jpg`,
+      `${basePath}.png`,
+      `${basePath}.webp`,
+      `${basePath}.avif`,
+      `${basePath}.svg`,
+      DEFAULT_TEAM_IMAGE,
+    ];
   }, [member.hasImage, member.id, member.imagePath]);
 
   const [candidateIndex, setCandidateIndex] = useState(0);

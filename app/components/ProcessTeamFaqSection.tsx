@@ -32,12 +32,6 @@ const steps = [
       "We support deployment, stabilization, and performance tuning to ensure the system operates reliably as usage grows.",
     icon: TrendingUp,
   },
-  {
-    title: "Ongoing Improvement",
-    description:
-      "After launch, we continue refining the platform based on real usage, operational data, and evolving business needs.",
-    icon: Sparkles,
-  },
 ];
 
 const faqs = [
@@ -47,11 +41,11 @@ const faqs = [
   },
   {
     q: "2. How long does it take to complete a project?",
-    a: "A standard web project takes 3-6 weeks. AI/automation projects typically take 6-12 weeks depending on complexity. We share a clear timeline during our discovery call before any work begins.",
+    a: "A standard web project takes 3-6 weeks. AI and automation projects typically take 6-12 weeks depending on complexity. We share a clear timeline during our discovery call before any work begins.",
   },
   {
     q: "3. How much does a typical project cost?",
-    a: "Projects start from ₹25,000 for basic web development and scale based on complexity. AI and automation projects are scoped individually. We provide a detailed quote after understanding your requirements — no hidden costs.",
+    a: "Projects start from Rs 25,000 for basic web development and scale based on complexity. AI and automation projects are scoped individually. We provide a detailed quote after understanding your requirements - no hidden costs.",
   },
   {
     q: "4. Do you work with startups or only established companies?",
@@ -143,105 +137,109 @@ const ProcessTeamFaqSection = ({
   return (
     <>
       {includeProcess && (
-      <section id="our-process" className="pb-20">
-        <div className="container mx-auto px-6">
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-[linear-gradient(160deg,hsl(var(--background))_0%,hsl(var(--secondary))_55%,hsl(var(--background))_100%)] p-6 md:p-10 process-grid-bg">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,hsl(var(--primary)/0.14)_0%,transparent_42%),radial-gradient(circle_at_85%_82%,hsl(var(--accent)/0.08)_0%,transparent_42%)]" />
+        <section className="nexviatech-process pb-20">
+          <div className="container mx-auto px-6">
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-[linear-gradient(160deg,hsl(var(--background))_0%,hsl(var(--secondary))_55%,hsl(var(--background))_100%)] p-6 md:p-10 process-grid-bg">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,hsl(var(--primary)/0.14)_0%,transparent_42%),radial-gradient(circle_at_85%_82%,hsl(var(--accent)/0.08)_0%,transparent_42%)]" />
 
-            <div className="relative z-10 mb-10 max-w-3xl mx-auto text-center">
-              <p className="section-label mb-3">Our Process</p>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tighter-custom text-foreground mb-4">From Vision to Scale</h2>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                A proven framework designed to transform ambitious ideas into powerful, scalable digital products.
-              </p>
-            </div>
+              <div id="our-process" className="relative z-10 mb-10 max-w-3xl mx-auto text-center scroll-mt-28 md:scroll-mt-32">
+                <p className="section-label mb-3">Our Process</p>
+                <h2 className="text-3xl md:text-5xl font-bold tracking-tighter-custom text-foreground mb-4">From Vision to Scale</h2>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  A proven framework designed to transform ambitious ideas into powerful, scalable digital products.
+                </p>
+              </div>
 
-            <div className="relative z-10 overflow-x-auto pb-3 hide-scrollbar">
-              <div className="flex flex-col md:min-w-max md:flex-row md:items-start mx-auto">
-                {steps.map((step, idx) => (
-                  <div key={`flow-${step.title}`} className="flex flex-col md:flex-row md:items-center">
-                    <article className="group process-step-panel w-full md:w-[320px] p-5 md:p-6 rounded-xl premium-card">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-11 h-11 rounded-full border border-primary/40 bg-primary/15 flex items-center justify-center text-primary text-sm font-semibold shadow-[0_0_20px_rgba(14,165,255,0.35)] group-hover:shadow-[0_0_32px_rgba(14,165,255,0.5)] transition-all duration-300">
-                          {idx + 1}
+              <div className="relative z-10 overflow-x-auto pb-3 hide-scrollbar">
+                <div className="flex flex-col md:min-w-max md:flex-row md:items-start mx-auto">
+                  {steps.map((step, idx) => (
+                    <div key={`flow-${step.title}`} className="flex flex-col md:flex-row md:items-center">
+                      <article className="group process-step-panel w-full md:w-[320px] p-5 md:p-6 rounded-xl premium-card">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-11 h-11 rounded-full border border-primary/40 bg-primary/15 flex items-center justify-center text-primary text-sm font-semibold shadow-[0_0_20px_rgba(14,165,255,0.35)] group-hover:shadow-[0_0_32px_rgba(14,165,255,0.5)] transition-all duration-300">
+                            {idx + 1}
+                          </div>
+                          <step.icon className="w-5 h-5 text-primary/90" />
                         </div>
-                        <step.icon className="w-5 h-5 text-primary/90" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">{step.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{step.description}</p>
-                    </article>
+                        <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">{step.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{step.description}</p>
+                      </article>
 
-                    {idx < steps.length - 1 && (
-                      <div className="py-3 md:py-0 md:w-20 lg:w-24 md:px-2 flex justify-center">
-                        <div className="h-10 w-[2px] md:h-[2px] md:w-full process-data-line rounded-full" />
-                      </div>
-                    )}
-                  </div>
-                ))}
+                      {idx < steps.length - 1 && (
+                        <div className="py-3 md:py-0 md:w-20 lg:w-24 md:px-2 flex justify-center">
+                          <div className="h-10 w-[2px] md:h-[2px] md:w-full process-data-line rounded-full" />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
 
       {includeTeam && (
-      <section id="our-team" className="pb-20">
-        <div className="container mx-auto px-6">
-          <p className="section-label mb-3">Our Team</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight-custom text-gradient mb-8">The Minds Behind NexviaTech</h2>
-
-          {teamLoading ? (
-            <div className="text-muted-foreground text-sm">Loading team...</div>
-          ) : teamError ? (
-            <div className="text-muted-foreground text-sm">{teamError}</div>
-          ) : teamMembers.length === 0 ? (
-            <div className="text-muted-foreground text-sm">No team members found.</div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-              {teamMembers.map((member) => (
-                <TeamCard key={member.id} member={member} />
-              ))}
+        <section id="team" className="nexviatech-team pb-20">
+          <div className="container mx-auto px-6">
+            <div>
+              <p className="section-label mb-3">Team</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight-custom text-gradient mb-8">The Minds Behind NexviaTech</h2>
             </div>
-          )}
-        </div>
-      </section>
+
+            {teamLoading ? (
+              <div className="text-muted-foreground text-sm">Loading team...</div>
+            ) : teamError ? (
+              <div className="text-muted-foreground text-sm">{teamError}</div>
+            ) : teamMembers.length === 0 ? (
+              <div className="text-muted-foreground text-sm">No team members found.</div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                {teamMembers.map((member) => (
+                  <TeamCard key={member.id} member={member} />
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
       )}
 
       {includeFaqs && (
-      <section id="faqs" className="pb-20">
-        <div className="container mx-auto px-6">
-          <div className="glass border-glow rounded-xl p-6 md:p-8 text-left">
-            <p className="text-left section-label mb-3">FAQs</p>
-            <h2 className="text-left text-3xl md:text-4xl font-bold tracking-tight-custom text-gradient mb-6">
-              Questions Clients Ask Before Building
-            </h2>
+        <section id="resources" className="nexviatech-resources pb-20">
+          <div className="container mx-auto px-6">
+            <div className="glass border-glow rounded-xl p-6 md:p-8 text-left">
+              <div>
+                <p className="text-left section-label mb-3">Resources</p>
+                <h2 className="text-left text-3xl md:text-4xl font-bold tracking-tight-custom text-gradient mb-6">
+                  Questions Clients Ask Before Building
+                </h2>
+              </div>
 
-            <Accordion type="single" collapsible className="w-full">
-              {visibleFaqs.map((item, idx) => (
-                <AccordionItem key={item.q} value={`item-${idx}`} className="faq-item border-0 px-4">
-                  <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-xl font-semibold">
-                    {item.q}
-                    <span className="faq-trigger-icon" />
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{item.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+              <Accordion type="single" collapsible className="w-full">
+                {visibleFaqs.map((item, idx) => (
+                  <AccordionItem key={item.q} value={`item-${idx}`} className="faq-item border-0 px-4">
+                    <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-xl font-semibold">
+                      {item.q}
+                      <span className="faq-trigger-icon" />
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{item.a}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
 
-            <div className="mt-6">
-              <button
-                type="button"
-                onClick={() => setShowAllFaqs((value) => !value)}
-                className="btn-tag text-sm font-medium"
-                suppressHydrationWarning
-              >
-                {showAllFaqs ? "Show Less" : "Read More"}
-              </button>
+              <div className="mt-6">
+                <button
+                  type="button"
+                  onClick={() => setShowAllFaqs((value) => !value)}
+                  className="btn-tag text-sm font-medium"
+                  suppressHydrationWarning
+                >
+                  {showAllFaqs ? "Show Less" : "Read More"}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
     </>
   );

@@ -5,6 +5,7 @@ export type TestimonialData = {
   role: string;
   company: string;
   image?: string;
+  reviewUrl?: string;
 };
 
 const splitBlocks = (raw: string): string[] =>
@@ -43,6 +44,7 @@ export const parseTestimonials = (raw: string): TestimonialData[] => {
       role: fields.role || "Client",
       company: fields.company || "N/A",
       image: fields.image || undefined,
+      reviewUrl: fields.review_url || undefined,
     });
   });
 

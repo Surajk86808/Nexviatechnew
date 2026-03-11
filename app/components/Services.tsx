@@ -91,14 +91,16 @@ const Services = () => {
   };
 
   return (
-    <section id="solutions-overview" className="py-24 relative">
+    <section id="solutions" className="nexviatech-solutions py-24 relative">
       <div className="container mx-auto px-6">
-        <ScrollReveal>
-          <p className="section-label mb-4">SOLUTIONS OVERVIEW</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter-custom text-gradient mb-16">
-            Technology Solutions Built for Performance
-          </h2>
-        </ScrollReveal>
+        <div>
+          <ScrollReveal>
+            <p className="section-label mb-4">Solutions</p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter-custom text-gradient mb-16">
+              Technology Solutions Built for Performance
+            </h2>
+          </ScrollReveal>
+        </div>
 
         {loading ? (
           <div className="text-muted-foreground text-sm">Loading expertise...</div>
@@ -112,8 +114,8 @@ const Services = () => {
               const Icon = item.iconComponent;
               return (
                 <ScrollReveal key={item.id} delay={i * 0.08}>
-                  <div onMouseMove={handleMouseMove} className="glow-card premium-card rounded-xl p-8 h-full group cursor-default">
-                    <Icon className="w-8 h-8 text-primary mb-5 group-hover:scale-110 transition-transform" />
+                  <div onMouseMove={handleMouseMove} className="glow-card premium-card rounded-xl bg-blue-50/50 dark:bg-transparent p-8 h-full group cursor-default">
+                    <Icon className="w-8 h-8 text-blue-700 dark:text-primary mb-5 group-hover:scale-110 transition-transform" />
                     <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                   </div>

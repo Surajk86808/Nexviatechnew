@@ -2,7 +2,6 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import CompanyLogosMarquee from "@/components/CompanyLogosMarquee";
 import ValuePropositions from "@/components/ValuePropositions";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -17,13 +16,12 @@ const Index = () => {
     <div className="min-h-screen bg-background text-center">
       <Header />
       <Hero />
-      <CompanyLogosMarquee />
+      <Testimonials />
+      <ClientReviewsSection />
       <ValuePropositions />
       <Services />
       <ProcessTeamFaqSection includeTeam={false} includeFaqs={false} />
-      <Testimonials />
       <Portfolio mode="home" />
-      <ClientReviewsSection />
       <ProcessTeamFaqSection includeProcess={false} />
       <ContactSection />
       <Footer />
@@ -32,4 +30,3 @@ const Index = () => {
 };
 
 export default Index;
-
