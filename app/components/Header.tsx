@@ -90,10 +90,6 @@ const Header = () => {
       }
 
       setActiveHash((current) => (current === nextActive ? current : nextActive));
-
-      if (window.location.hash !== nextActive) {
-        window.history.replaceState(null, "", `${pathname}${nextActive}`);
-      }
     };
 
     syncActiveSection();
