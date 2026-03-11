@@ -1,6 +1,6 @@
  
 id: review-1
-video: https://www.youtube.com/watch?v=GftlBD-Apu8&list=RDMMGftlBD-Apu8&start_radio=1
+video: https://www.youtube.com/
 name: Rajesh Mehta
 designation: Founder, Yello Premier League
 company: Yello Premier League
@@ -11,7 +11,7 @@ fulltestimonial2: "The attention to detail, technical expertise, and commitment 
 fulltestimonial3: "What impressed me most was their proactive communication and ability to solve complex problems efficiently."
 
 id: review-2
-video: https://www.youtube.com/watch?v=GftlBD-Apu8&list=RDMMGftlBD-Apu8&start_radio=1
+video: https://www.youtube.com/
 name: Praveen Kumar Chaudhary
 designation: Owner, Sri Baba Vaidyanath Steels
 company: Sri Baba Vaidyanath Steels
@@ -22,7 +22,7 @@ fulltestimonial2: "The SEO optimization has put us on the first page of Google. 
 fulltestimonial3: "Their understanding of the B2B manufacturing sector made all the difference."
 
 id: review-3
-video: https://www.youtube.com/watch?v=GftlBD-Apu8&list=RDMMGftlBD-Apu8&start_radio=1
+video: https://www.youtube.com/
 name: Arjun Singh
 designation: Product Lead, Your Doc Talk
 company: Your Doc Talk
